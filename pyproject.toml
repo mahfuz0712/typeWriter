@@ -1,0 +1,14 @@
+[project]
+name = "typewriter"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pyautogui>=0.9.54",
+    "pyinstaller>=6.20.0",
+    "pyside6>=6.11.0",
+    "taskipy>=1.14.1",
+]
+[tool.taskipy.tasks]
+build-windows = "uv run pyinstaller src/main.py --onefile --noconsole --icon src/assets/icon.ico"
